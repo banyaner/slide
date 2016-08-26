@@ -29,25 +29,22 @@ html,body{
   flex-shrink: 0;
   text-align: center;
 }
-
-.slide-pre{
-display: none;
-  animation-duration: 1s;
+.slide-btn--left{
+  position: fixed;
+  bottom: 50%;
+  left: 20px;
 }
-.slide-current{
-  display: block;
-  animation-duration: 1s;
-
+.slide-btn--down{
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
-.slide-back-pre{
-  display: none;
-  animation-duration: 1s;
+.slide-btn--right{
+  position: fixed;
+  bottom: 50%;
+  right: 20px;
 }
-.slide-back-current{
-  display: block;
-  animation-duration: 1s;
-}
-
 
 // 垂直滑动样式
 
