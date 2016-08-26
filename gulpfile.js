@@ -13,19 +13,8 @@ var pkg = require('./package.json'),
     autoprefixer = require('gulp-autoprefixer'),
     path = {
         index: 'src/index.html',
-        asset: ['src/**/*', '!src/css/**/*', '!src/js/**/*', '!src/index.html'],
-        build: 'dist/',
-        ftpPath: 'activity/' + pkg.name
-    },
-    ftppass = {
-        test: {
-            username: 'ynren1',
-            password: 'ynren@163'
-        },
-        publish: {
-            username: 'wangjun2012',
-            password: 'wangjun2012'
-        }
+        asset: ['src/**/*', 'src/js/index.js','!src/css/slide.css', '!src/js/hammer.min.js','!src/js/slide.js', '!src/index.html','!src/slice'],
+        build: 'dist/'
     };
 gulp.task('browser-sync', ['tocss'], function () {
     browserSync.init({
