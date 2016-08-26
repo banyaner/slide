@@ -45,28 +45,23 @@ body {
 	text-align: center;
 }
 
-.slide-pre {
-	display: none;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
+.slide-btn--left {
+	position: fixed;
+	bottom: 50%;
+	left: 20px;
 }
 
-.slide-current {
-	display: block;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
+.slide-btn--down {
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
 }
 
-.slide-back-pre {
-	display: none;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-}
-
-.slide-back-current {
-	display: block;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
+.slide-btn--right {
+	position: fixed;
+	bottom: 50%;
+	right: 20px;
 }
 
 .slide-pre--nv {
