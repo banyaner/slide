@@ -4,7 +4,6 @@
 #基本用法：
 引用slide.js库。html文档中引入如下代码
 ```html
-// html
     <div class="slide-container">
         <div class="slide-wrapper"  id="slide">
             <div class="slide-cont">
