@@ -12,7 +12,6 @@
      */
 
     win.Slide = function () {
-        console.log(arguments);
         var _params = arguments[1];
         this.container = document.getElementById(arguments[0].slice(1));
         this.childrens = this.container.children;
@@ -33,9 +32,9 @@
             horizontal: {current: 'slide-cont slide-current--ph', pre: 'slide-cont slide-pre--ph'},
             vertical: {current: 'slide-cont slide-current--pv', pre: 'slide-cont slide-pre--pv'}
         };
-        if (that.currentIndex > 0) {
-            that.childrens[that.currentIndex].className = nextClass[dir].pre;
-            that.childrens[--that.currentIndex].className = nextClass[dir].current;
+        if (this.currentIndex > 0) {
+            this.childrens[this.currentIndex].className = nextClass[dir].pre;
+            this.childrens[--this.currentIndex].className = nextClass[dir].current;
         }
     };
     Slide.prototype.slideNextPage = function (dir) {
@@ -60,39 +59,8 @@
     Slide.prototype.slideDirection = function (dir, autoPlayTime) {
         //var that = this;// this指向  win.Slide {container: div#slide.slide-wrapper, childrens: HTMLCollection[4],
         // slideNumb: undefined, currentIndex: 1}
-        /**
-         * @func 翻页函数
-         * @param {string} dir -参数有两种取值 vertical horizonal默认为horizontal
-         */
-        this.slidePrePage = function (dir) {
-            var nextClass = {
-                horizontal: {current: 'slide-cont slide-current--ph', pre: 'slide-cont slide-pre--ph'},
-                vertical: {current: 'slide-cont slide-current--pv', pre: 'slide-cont slide-pre--pv'}
-            };
-            if (this.currentIndex > 0) {
-                this.childrens[this.currentIndex].className = nextClass[dir].pre;
-                this.childrens[--this.currentIndex].className = nextClass[dir].current;
-            }
-        };
-
-        this.slideNextPage = function (dir) {
-
-            var nextClass = {
-                horizontal: {current: 'slide-cont slide-current--nh', pre: 'slide-cont slide-pre--nh'},
-                vertical: {current: 'slide-cont slide-current--nv', pre: 'slide-cont slide-pre--nv'}
-            };
-            if (this.currentIndex < this.slideNumb - 1) {
-                this.childrens[this.currentIndex].className = nextClass[dir].pre;
-                this.childrens[++this.currentIndex].className = nextClass[dir].current;
-                return true;
-            } else if (this.currentIndex === this.slideNumb - 1) {
-                this.childrens[this.currentIndex].className = nextClass[dir].current;
-                return false;
-            }
-
-        };
         //翻页方式
-        that = this;//函数内this指向id='slide'的DOM节点，所以要用that替代this
+        var that = this;//函数内this指向id='slide'的DOM节点，所以要用that替代this
         switch (dir) {
             case 'vertical':
                 //this.container.style.flexDirection = "column";
@@ -125,7 +93,6 @@
                 }
             }, autoPlayTime);
         }
-
     };
 
     // 前进后退按钮事件监听
@@ -147,5 +114,4 @@
                 }, false);
         }
     };
-
 }(window));
