@@ -6,9 +6,8 @@
      * @class
      * @classdesc 滑屏类
      * @param {object} params
-     *  @param {object}params.direction - 滑屏方向 vertical, horizontal
-     *  @param {object}params.autoplay - 自动播放，每页停留时间
-     *
+     *  @param {object} params.direction - 滑屏方向 vertical, horizontal
+     *  @param {object} params.autoplay - 自动播放，每页停留时间
      */
 
     win.Slide = function () {

@@ -1,5 +1,4 @@
-var pkg = require('./package.json'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
     del = require('del'),
     usemin = require('gulp-usemin'),
     uglify = require('gulp-uglify'),
@@ -13,7 +12,7 @@ var pkg = require('./package.json'),
     autoprefixer = require('gulp-autoprefixer'),
     path = {
         index: 'src/index.html',
-        asset: ['src/**/*', 'src/js/index.js','!src/css/slide.css', '!src/js/hammer.min.js','!src/js/slide.js', '!src/index.html','!src/slice'],
+        asset: ['src/**/*', 'src/js/index.js', '!src/css/slide.css', '!src/js/hammer.min.js', '!src/js/slide.js', '!src/index.html', '!src/slice'],
         build: 'dist/'
     };
 gulp.task('browser-sync', ['tocss'], function () {
